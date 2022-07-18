@@ -1,0 +1,27 @@
+@import url(https://oofabyy.github.io/css/sakura-css/sakumai.css);
+/*UPDATE URL, PLEASE DO NOT TOUCH IT*/
+:root {
+  --accent: #757575;
+  --ingame-bg: #fff;
+  --text-color: #353535;
+}
+/*JP Font by tae#4444*/
+@font-face {
+  font-family: JP;
+  src: url(https://dl.dropboxusercontent.com/s/9b7aer2osbcd388/logotypejp_mp_b_1.1.ttf?dl=0);
+}
+@font-face {
+  font-family: gamefont;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2);
+}
+@font-face {
+  font-family: Bungee;
+  src: url(https://fonts.gstatic.com/s/bungee/v6/N0bU2SZBIuF2PU_0DXR1.woff2);
+}
+/*
+Css edited by Abyy, most of the code took from v79 css
+If you want to make an update or fix issues please contact me:
+Discord: abii#5382
+KrunkerIgn: OofAbyy
+*/
+/*Change everything you want below :)*/

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/node_modules/sal.js/dist/sal.css" />
+    <title>Abyy</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#icon").click(function () {
+          $("ul").toggleClass("show");
+          $("#menu").toggleClass("spin");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-container">
+        <nav>
+          <ul id="tabs">
+            <li>
+              <a href="#"
+                ><i class="nav-icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </i>
+                <i class="nav-text">Profile</i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="nav-icon">
+                  <ion-icon name="logo-css3"></ion-icon>
+                </i>
+                <i class="nav-text">CSS</i>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="nav-icon">
+                  <ion-icon name="share-social-outline"></ion-icon>
+                </i>
+                <i class="nav-text">Social</i>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="nav-icon">
+                  <ion-icon name="card-outline"></ion-icon>
+                </i>
+                <i class="nav-text">Commissions</i>
+              </a>
+            </li>
+          </ul>
+          <label id="icon">
+            <ion-icon name="grid-outline" id="menu"></ion-icon>
+          </label>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <!--Start edit in here-->
+      <div
+        class="menuWindow active"
+        data-sal="fade"
+        data-sal-delay="300"
+        data-sal-duration="500"
+        data-sal-easing="ease-in-out"
+        data-sal-repeat="1"
+      >
+        <!--Profile-->
+        <div class="wrap">
+          <div class="main-header">
+            <h1>About Me</h1>
+          </div>
+          <div class="griddiv">
+            <div class="wrap">
+              <div class="leftdiv">
+                <h2>Hello There!</h2>
+                <div class="submenu">
+                  <div id="name">
+                    <span class="nametag">Name</span>
+                    <p>HaiDang</p>
+                  </div>
+                  <div id="age">
+                    <span class="nametag">Age</span>
+                    <p>15</p>
+                  </div>
+                  <div id="alname">
+                    <span class="nametag">Nickname</span>
+                    <p>Abyy</p>
+                  </div>
+                </div>
+                <p class="about">
+                  Welcome to my page. I use Blender and VS Code as my hobby, I
+                  also love making papercrafts and drawing. I'm Vietnamese. This
+                  website shows most of CSS that I have made.
+                </p>
+                <h1>Motivation</h1>
+                <p class="about">
+                  I started making CSS when I saw tae's YukiAim CSS. I don't
+                  know what to do that time, but thanks to the help of many
+                  people, I did it! I'm trying my best to get myself verified!
+                  <span class="thanksrin"
+                    >Thanks Rin ;-;#7349 for helping me and being with me on
+                    this journey!</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="rightdiv">
+              <img src="img/img.svg" class="aboutimg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="menuWindow"
+        data-sal="fade"
+        data-sal-delay="300"
+        data-sal-duration="500"
+        data-sal-easing="ease-in-out"
+        data-sal-repeat="7"
+      >
+        <!--CSS-->
+        <div class="wrap">
+          <div class="main-header">
+            <h1>CSS</h1>
+          </div>
+          <span class="hoping"
+            >Hope those works will make you Krunker experience better!</span
+          >
+          <div class="row">
+            <div class="css-1">
+              <div class="css-item">
+                <h4 class="cssname">SakuMai CSS</h4>
+                <p>
+                  I made this css based on Sakurajima Mai with black-white theme
+                  for Saika-Forum.
+                </p>
+                <p>Original: v79 css.</p>
+                <div class="img-wrap">
+                  <img src="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="css-download">
+            <div class="css-download-grid">
+              <div class="download-container">
+                <a
+                  href="https://oofabyy.github.io/css/sakura-css/main_custom.css"
+                  target="_blank"
+                  download="main_custom.css"
+                  >Main</a
+                >
+              </div>
+              <div class="download-container">
+                <a
+                  href="https://oofabyy.github.io/css/sakura-css/social_custom.css"
+                  target="_blank"
+                  download
+                  >Hub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="css-item">
+                <h4 class="cssname">nya- CSS</h4>
+                <p>
+                  Artisan style css for nya- clan. I used the customize button
+                  idea from SakuraTheme CSS by Namekuji
+                </p>
+
+                <img src="" />
+              </div>
+            </div>
+          </div>
+          <div class="css-download">
+            <div class="css-download-grid">
+              <div class="download-container">
+                <a
+                  href="https://oofabyy.github.io/zeena/main_custom.css"
+                  target="blank"
+                  download
+                  >Main</a
+                >
+              </div>
+              <div id="download-container-no">
+                <span href="" target="_blank" download>Hub</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="css-item">
+                <h4 class="cssname">Genshin Impact Theme CSS</h4>
+                <p>
+                  I love Genshin Impact so much that I did this css. It's the
+                  most elaborate css that I've ever made.
+                </p>
+
+                <img src="" />
+              </div>
+            </div>
+          </div>
+          <div class="css-download">
+            <div class="css-download-grid">
+              <div class="download-container">
+                <a
+                  href="https://oofabyy.github.io/genshinimpacttheme/main_custom.css"
+                  target="blank"
+                  download
+                  >Main</a
+                >
+              </div>
+              <div id="download-container-no">
+                <span href="" target="_blank" download>Hub</span>
+              </div>
+            </div>
+          </div>
+          <div class="space"></div>
+        </div>
+      </div>
+      <div
+        class="menuWindow"
+        data-sal="fade"
+        data-sal-delay="300"
+        data-sal-duration="500"
+        data-sal-easing="ease-in-out"
+        data-sal-repeat="1"
+      >
+        <div class="wrap">
+          <!--Social-->
+          <div class="main-header">
+            <h1>Social</h1>
+          </div>
+          <div class="socialbox">
+            <h2 class="lafheader">Best Client for CSS</h2>
+            <p id="lafdes">
+              The NullClient is a very good client, light-weight based and
+              focused on CSS, created by CrafterL and Commander. It has a CSS
+              library which you can quickly change your css.
+            </p>
+            <div class="css-download">
+              <div class="css-download.-grid-1">
+                <div class="download-container">
+                  <a href="https://nullclient.tech/download" target="_blank"
+                    >Download NullClient<i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="main-header">
+              <h1 class="css-maker">Other CSS-Maker</h1>
+            </div>
+            <div class="css-maker-link">
+              <a
+                target="_blank"
+                href="https://whuuayu.github.io/krunker/"
+                class="tae"
+                >tae
+              </a>
+
+              <a
+                target="_blank"
+                href="https://namekujilsds.github.io/"
+                class="kuji"
+                >Namekuji</a
+              >
+
+              <a target="_blank" href="https://deadcell.co.uk/" class="xed"
+                >XED</a
+              >
+
+              <a
+                target="_blank"
+                href="https://trnlinh.github.io/css/"
+                class="rin"
+                >Rin</a
+              >
+
+              <a target="_blank" href="https://luketheduke.xyz/" class="luke"
+                >Luke</a
+              >
+
+              <a target="_blank" href="https://github.com/envyxyz/" class="envy"
+                >envy</a
+              >
+            </div>
+            <div class="space"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="menuWindow"
+        data-sal="fade"
+        data-sal-delay="300"
+        data-sal-duration="500"
+        data-sal-easing="ease-in-out"
+        data-sal-repeat="1"
+      >
+        <!--Commissions-->
+        <div class="wrap">
+          <div class="main-header">
+            <h1>Commissions</h1>
+          </div>
+          <div class="boxTerms">
+            <div id="priceList">
+              <div id="priceBigHeader">Pricing</div>
+              <div id="editPrice">
+                <p class="priceHeader">Edits</p>
+                <span>5-10 USD/10000KR</span>
+              </div>
+              <div id="gamePrice">
+                <p class="priceHeader">Game CSS</p>
+                <span>10-35 USD</span>
+              </div>
+              <div id="socialPrice">
+                <p class="priceHeader">Social CSS</p>
+                <span>2000-10000 KR</span>
+              </div>
+            </div>
+          </div>
+          <span id="asdf"
+            >For further prices & information, please contact me via
+            Discord</span
+          >
+          <div id="contactme">
+            Contact Me
+            <div id="contact">
+              <a
+                href="https://discordapp.com/users/758582648380588093"
+                target="_blank"
+              >
+                <ion-icon class="fa-discord" name="logo-discord"></ion-icon>
+              </a>
+              <a href="https://www.facebook.com/oofabyy/" target="_blank">
+                <ion-icon class="fa-facebook" name="logo-facebook"></ion-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Stop here-->
+    <script>
+      document.querySelectorAll("#tabs>li").forEach((el, index) =>
+        el.addEventListener("click", () => {
+          document
+            .querySelector(".container>.active")
+            .classList.remove("active");
+
+          document
+            .querySelector(`.container>:nth-child(${index + 1})`)
+            .classList.add("active");
+        })
+      );
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/node_modules/sal.js/dist/sal.js"></script>
+    <script>
+      sal();
+    </script>
+  </body>
+</html>

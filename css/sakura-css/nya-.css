@@ -1,0 +1,1411 @@
+:root {
+  --accent: #8accd4;
+  --white: #fff;
+  --black: #000;
+  --accent-2: #a4d8de;
+}
+@font-face {
+  src: url(https://dl.dropboxusercontent.com/s/doefhih3e9re7ha/MPLUSRounded1c-Black.ttf?dl=0);
+  font-family: "M";
+  font-style: normal;
+  font-weight: 900;
+}
+* {
+  font-family: "M";
+}
+#mapInfo {
+  font-size: 0;
+}
+#mapInfoHolder::after {
+  font-size: 15px !important;
+  content: "css by Abyy"; /*try delete this, I'll find you, little bitch*/
+  display: block;
+  position: absolute;
+}
+/*Useless*/
+#aHolder,
+#timerIcon,
+#curGameInfo,
+#tlInfHold,
+#newsHolder,
+#merchHolder,
+#mainLogo,
+#seasonLabel,
+#termsInfo,
+#rankedSoonTm,
+#headerRight,
+.progressBar,
+.verticalSeparator,
+#menuRnkDisp,
+#faceItIconM,
+#loadEditrBtn {
+  display: none !important;
+}
+/*Loading Screen*/
+@keyframes load {
+  0% {
+    width: 1%;
+  }
+  10% {
+    width: 22%;
+  }
+  20% {
+    width: 40%;
+  }
+  25% {
+    width: 52%;
+  }
+  40% {
+    width: 66%;
+  }
+  50% {
+    width: 70%;
+  }
+  90% {
+    width: 88%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+#initLoader {
+  background-color: #fff;
+}
+#loadingBg {
+  top: 40px;
+  content: "";
+  background-size: 640px;
+  background-position: center top;
+  background-repeat: no-repeat !important;
+  z-index: -2;
+  background-color: transparent !important;
+  color: var(--accent);
+}
+#loadGamNm {
+  display: none !important;
+}
+#loadInfoRHolder {
+  color: #fff;
+  font-size: 0;
+  background-color: #000;
+  padding: 4px 8px;
+  box-shadow: 4px 4px var(--accent);
+}
+#loadTipsHolder {
+  color: var(--text-color);
+  font-size: 0;
+}
+#loadTipsHolder::before {
+  content: "css by Abyy";
+  display: block;
+  font-size: 24px;
+  color: var(--accent) !important;
+}
+#loadTipsHolder::after {
+  content: "読み込み中";
+  font-size: 40px;
+  color: var(--accent) !important;
+  position: fixed;
+  bottom: 10em !important;
+  left: 36%;
+  font-family: "M";
+}
+.lC-cube {
+  background-color: rgba(148, 148, 148, 0.6);
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+  margin-top: 90px;
+  border-radius: 8px;
+}
+.lC-cube::after {
+  border-radius: 8px;
+  animation: load 3s cubic-bezier(0.3, 0.3, 0.3, 0.3);
+  background-color: var(--accent);
+  height: 30px;
+  content: "";
+  z-index: 999 !important;
+  width: 100%;
+  box-shadow: 0 10px 40px -10px #fff;
+}
+.lC-r,
+.lC-bt,
+.lC-b,
+.lC-t,
+.lC-l,
+.lC-f,
+#lC-ico {
+  display: none !important;
+}
+.menuMGLink {
+  color: var(--accent) !important;
+}
+/*chat*/
+#uiBase.onMenu #chatHolder {
+  right: calc(10% - 100px);
+  bottom: 25px;
+  width: 420px;
+  left: unset;
+  z-index: -3 !important;
+}
+#uiBase.onGame #chatHolder {
+  left: 20px !important;
+  bottom: calc(50% - 180px) !important;
+}
+#uiBase.onEndScrn #chatHolder {
+  left: 208px !important;
+  bottom: 54px !important;
+}
+#uiBase.onCompMenu #chatHolder {
+  bottom: 160px !important;
+}
+#chatList {
+  background-color: transparent;
+}
+#chatList::-webkit-scrollbar {
+  display: none;
+}
+#uiBase.onMenu #chatList {
+  text-align: center;
+  -webkit-mask-image: linear-gradient(0deg, black, transparent 200px);
+}
+#uiBase.onMenu .chatItem {
+  max-width: 420px;
+}
+.chatItem {
+  font-size: 24px;
+  margin-left: 0;
+  margin-top: 8px;
+}
+div:last-child .chatItem {
+  margin-bottom: 0;
+}
+.chatMsg {
+  color: #fff;
+}
+.chatMsg span[style*="#eb5656"] {
+  color: #ff4f4f !important;
+}
+.chatMsg span[style*="#9eeb56"] {
+  color: #1fbfff !important;
+}
+.chatMsg[style*="color"] {
+  color: var(--sidebar) !important;
+}
+#chatInputHolder {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0;
+  margin: 0;
+}
+#voiceDisplay {
+  background-color: transparent;
+  border: none;
+}
+#uiBase.onGame #voiceDisplay {
+  bottom: 62px;
+}
+#uiBase.onMenu #voiceDisplay {
+  left: calc(50% + 180px);
+}
+#voiceIcon.voiceOff {
+  color: transparent !important;
+}
+#recTimer {
+  display: none;
+}
+#chatInput {
+  font-size: 0px;
+  padding: 0 8px;
+  border: none;
+  border-bottom: 0px solid transparent;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0;
+  width: -webkit-fill-available;
+  transition-duration: 0.25s;
+}
+#chatInput::placeholder {
+  color: transparent;
+  font-size: 0;
+}
+#chatInput:focus {
+  font-size: 24px;
+  border: 4px solid #fff;
+  margin-top: 8px;
+  background-color: var(--border);
+  border-radius: 20px;
+}
+#chatSwitchHolder {
+  position: absolute;
+  right: calc(100% + 12px);
+  bottom: 0;
+}
+#chatSwitch {
+  font-size: 36px;
+  color: transparent;
+  transition-duration: 0.25s;
+}
+#chatHolder:hover #chatSwitch {
+  color: #fff;
+}
+/*Menu*/
+#menuHolder {
+  z-index: unset;
+}
+#uiBase.onMenu #instructions {
+  display: none;
+}
+#menuItemContainer {
+  top: 240px;
+  bottom: 260px;
+  width: 0;
+  z-index: 3;
+  justify-content: space-between;
+  background-color: transparent;
+}
+#menuItemContainer::before {
+  content: " ";
+  border-radius: 12px;
+  display: block;
+  position: fixed;
+  width: 320px;
+  left: -120px;
+  top: 140px;
+  bottom: 0px;
+  background-color: var(--white);
+  transform: rotateZ(2deg);
+  z-index: -1;
+  box-shadow: 8px 8px 0px 0px var(--accent);
+}
+.menuItem {
+  background-color: transparent;
+  transition-duration: 0.25s;
+  margin: -1px 0;
+  align-items: baseline;
+  padding-left: 20px;
+  transform-origin: left;
+  flex-grow: unset;
+}
+.menuItem:hover {
+  border-left: 0;
+  transform: scale(1.25);
+}
+.menuItem .menuItemIcon {
+  display: none;
+}
+.menBtnIcn {
+  display: none !important;
+}
+.menuItem .menuItemTitle {
+  margin-top: 0;
+  font-size: 32px !important;
+  color: var(--accent);
+  width: max-content;
+}
+#menuBtnProfile.menuItemTitle {
+  color: transparent !important;
+}
+#menuBtnProfile:before {
+  content: "桜島麻衣";
+  color: var(--accent) !important;
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+#menuBtnShop {
+  color: transparent !important;
+}
+#menuBtnShop:before {
+  color: var(--accent) !important;
+  content: "市肆";
+  bottom: 42px !important;
+  right: 80px;
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+#menuBtnChall {
+  color: transparent !important;
+}
+#menuBtnChall:before {
+  color: var(--accent) !important;
+  content: "挑戦";
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+#menuBtnSocial {
+  color: transparent !important;
+}
+#menuBtnSocial:before {
+  color: var(--accent) !important;
+  content: "社交";
+  text-align: center;
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+#menuBtnMaps {
+  color: transparent !important;
+}
+#menuBtnMaps:before {
+  color: var(--accent) !important;
+  content: "地図";
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+#menuBtnMods {
+  color: transparent !important;
+}
+#menuBtnMods:before {
+  color: var(--accent) !important;
+  content: "モッド";
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+#menuBtnSettings {
+  color: transparent !important;
+}
+#menuBtnSettings:before {
+  color: var(--accent) !important;
+  content: "設定";
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+#menuBtnExit {
+  color: transparent !important;
+}
+#menuBtnExit:before {
+  color: var(--accent) !important;
+  content: "  出口";
+  border-left: 8px solid var(--accent);
+  padding-left: 10px;
+}
+/*HeaderBar*/
+.headerBarLeft {
+  background-color: transparent;
+  top: 20px;
+  border-radius: 0;
+  z-index: 4;
+}
+/*Yukiaim*/
+.headerBarLeft::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: calc(100% + 80px);
+  padding: 16px;
+  padding-bottom: 20px;
+  left: -16px;
+  bottom: -28px;
+  background-color: var(--accent);
+  border-bottom: 6px solid var(--white);
+  border-right: 6px solid var(--white);
+  border-bottom-right-radius: 120px;
+  border-top-right-radius: 120px;
+  z-index: -1;
+}
+.headerBarLeft div {
+  font-size: 32px;
+}
+#mLevelCont {
+  background-color: transparent;
+}
+#menuMiniProfilePic {
+  background-color: transparent;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+  content: url(https://cdn.discordapp.com/attachments/837695235231711252/957242498361724948/image_12.png);
+  margin-right: 50px;
+  transform: translateY(70px) translateX(70px) scale(5.2);
+}
+#menuAccountUsername {
+  color: var(--accent);
+  font-size: 30px;
+  transform: rotate(0deg);
+  position: relative;
+  top: 30px;
+  left: 120px;
+}
+#menuAccountUsername:before {
+  content: "";
+  border-radius: 50px;
+  position: fixed;
+  left: -25px;
+  top: 2px;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  background-color: var(--white);
+  z-index: -2;
+  border: 2px solid #3fb2eb;
+}
+#menuAccountUsername:after {
+  content: "";
+  border-right: 6px solid var(--white);
+  border-left: 6px solid var(--white);
+  border-radius: 0;
+  position: fixed;
+  left: 20px;
+  top: -10px;
+  display: block;
+  width: 80px;
+  height: 20px;
+  background-color: transparent;
+  z-index: -1;
+}
+#mLevelContV:before {
+  content: "LVL ";
+  color: #3fb2eb;
+}
+#menuKRCount {
+  color: var(--white);
+  position: relative;
+  left: -43px;
+  top: -25px;
+  font-size: 28px;
+  background-color: var(--accent-2);
+  border-radius: 40px;
+  border: 2px solid var(--white);
+  height: 40px;
+  padding: 0px 16px 2px 16px;
+}
+#menuKRCount:before {
+  content: "";
+  border-radius: 50px;
+  position: fixed;
+  left: -25px;
+  top: 3px;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  background-color: var(--white);
+  z-index: -2;
+}
+#menuKRCount:after {
+  content: "";
+  border-right: 6px solid var(--white);
+  border-left: 6px solid var(--white);
+  border-radius: 0;
+  position: relative;
+  left: 30px;
+  top: -60px;
+  display: block;
+  width: 80px;
+  height: 20px;
+  background-color: transparent;
+  z-index: -1;
+}
+#menuKRCount span {
+  color: #3fb2eb !important;
+}
+#menuJNKCount {
+  font-size: 25px;
+  position: relative;
+  left: 60px;
+  top: -35px;
+  color: var(--accent);
+  z-index: -3;
+}
+#menuJNKCount::after {
+  content: "Jnk";
+  margin-left: 5px;
+  color: #3fb2eb;
+  font-size: 20px;
+}
+#menuJNKCount::before {
+  content: "";
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 40px;
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  padding: 16px;
+  left: -30px;
+  bottom: -10px;
+  background-color: var(--white);
+  z-index: -1;
+  border-right: 6px solid var(--accent);
+  border-bottom: 4px solid var(--accent);
+}
+#menuJNKCount span {
+  display: none;
+}
+#mailContainer {
+  transform: scale(1.2);
+  left: -140px;
+  top: 0px;
+}
+#mailIcon::after {
+  content: "郵便";
+  font-family: "M";
+  font-size: 13px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+#mLevelCont {
+  width: 160px;
+  height: 53px;
+  background-color: var(--accent);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 40px;
+  z-index: -2;
+  position: relative !important;
+  left: -180px;
+  top: 20px;
+  border-right: 6px solid var(--white);
+  border-bottom: 4px solid var(--white);
+  border-top: 4px solid var(--white);
+}
+#mLevelContV {
+  font-size: 25px !important;
+  line-height: 50px;
+  margin-left: 55px;
+}
+/*SubLogoBtn*/
+#subLogoButtons {
+  position: fixed !important;
+  right: -100px !important;
+  left: unset !important;
+  top: 10px;
+  width: 18em;
+  height: 18em;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  background-image: url(https://cdn.discordapp.com/attachments/837695235231711252/957557512582860840/image_13.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--accent);
+  z-index: 1;
+}
+.button.small {
+  position: relative !important;
+  width: 60px;
+  height: 80px !important;
+  border: 4px solid var(--accent) !important;
+  background-color: #3fb2eb;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: 0.4s !important;
+  background-image: linear-gradient(to right, var(--accent), #58bcee);
+}
+.button.small:hover {
+  background-color: #3fb2eb;
+  background-image: none;
+}
+#menuBtnHost {
+  bottom: 10px;
+  right: 20%;
+  transform: translate(-50%, 0);
+}
+#menuBtnBrowser {
+  top: 30px;
+  right: 24%;
+  transform: translate(-55%, 0);
+}
+#menuBtnRanked {
+  top: 45px;
+  right: 18%;
+  transform: translate(0, 0);
+}
+#inviteButton {
+  left: 55%;
+  bottom: 25px;
+  transform: translate(-55%, 0);
+}
+#menuBtnJoin {
+  bottom: 190px;
+  left: 100%;
+  transform: translate(-50%, 0);
+}
+/*customize*/
+
+/*SakuraTheme CSS by Namekuji*/
+#customizeButton .material-icons:before {
+  content: url(https://cdn.discordapp.com/attachments/837695235231711252/957512442114637854/image_10.png);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.4s;
+  transform: translate(-30%, 20%) scale(0.7);
+}
+#bubbleContainer {
+  display: none !important;
+  z-index: 100;
+}
+#menuClassContainer {
+  display: block;
+  position: fixed;
+  top: unset;
+  bottom: unset;
+  transform: unset;
+  z-index: 100 !important;
+}
+#customizeButton {
+  position: fixed;
+  bottom: 0;
+  left: 80px;
+  z-index: 100;
+  display: block;
+  top: unset;
+  width: 250px;
+  height: 240px;
+  border: unset !important;
+  background: transparent;
+  border-top-right-radius: 100px;
+  font-size: 0 !important;
+}
+#customizeButton .material-icons {
+  font-size: 0 !important;
+}
+#customizeButton:hover {
+  transform: unset;
+}
+@keyframes ditme {
+  0% {
+    transform: translate(-30%, 20%) scale(0.7);
+  }
+  50% {
+    transform: translate(-20%, 20%) scale(0.7);
+  }
+  100% {
+    transform: translate(-30%, 20%) scale(0.7);
+  }
+}
+#customizeButton:hover > .material-icons:before {
+  animation: ditme 2s infinite;
+  transition: 0.4s;
+  filter: drop-shadow(0 0 20px var(--border-color));
+}
+#menuClassName {
+  bottom: 10px;
+  position: fixed;
+  left: 20px;
+  transition: 0.6s;
+  opacity: 0;
+}
+#menuClassSubtext {
+  bottom: 70px;
+  transition: 0.4s;
+  position: fixed;
+  left: 20px;
+  opacity: 0;
+}
+#menuClassNameTag {
+  margin-top: unset;
+  position: fixed;
+  left: 20px;
+  bottom: 100px;
+  opacity: 0;
+  transition: 0.6s;
+}
+#classPreviewCanvas {
+  z-index: -1;
+  margin-bottom: unset;
+  position: fixed;
+  left: 480px;
+  top: unset;
+  bottom: -350px;
+  right: unset;
+  transform: translate(-50%, 0%) scale(0.8);
+  opacity: 0;
+  filter: drop-shadow(0 0 10px var(--accent-color));
+  transition: 0.6s;
+}
+#policeButton {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  transform: scale(0.8);
+}
+#menuClassContainer:hover > #classPreviewCanvas {
+  opacity: 1;
+  transition: 0.6s;
+  bottom: 50px;
+}
+#menuClassContainer:hover > #menuClassNameTag,
+#menuClassContainer:hover > #menuClassSubtext,
+#menuClassContainer:hover > #menuClassName {
+  opacity: 1;
+  left: 380px;
+  transition: 0.6s;
+}
+.buttonB {
+  border-color: var(--accent) !important;
+  background-color: var(--white);
+}
+/*Spec*/
+#spectButton span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
+  display: none !important;
+}
+/*Windows*/
+#windowHolder[style="display: none;"] {
+  display: block !important;
+  background: transparent;
+  transform: scale(0);
+  transition: 0.4s cubic-bezier(0.88, -0.98, 0.88, 0.88);
+}
+#windowHolder[style="display: block;"] {
+  background: transparent;
+  transform: scale(1);
+  transition: 0.4s cubic-bezier(0.01, 0.01, 0.38, 0.38);
+}
+#menuWindow.dark {
+  background-color: var(--white);
+  box-shadow: 8px 8px 0px 2px var(--accent);
+  border-radius: 0 !important;
+}
+.serverHeader {
+  background-color: var(--white);
+}
+a {
+  color: #58bcee;
+}
+.quickJoin {
+  border-color: #58bcee;
+  background-color: #58bcee;
+}
+#instructionsUpdate {
+  background-color: var(--white);
+}
+#instructionsUpdate div {
+  color: var(--accent) !important;
+}
+/*Profile*/
+.setHed,
+.bigMenTabs {
+  background-color: var(--accent);
+  transition: 0.4s;
+}
+.setHed:hover {
+  background-color: var(--accent-2);
+}
+.xpBar {
+  border-radius: 12px !important;
+}
+.xpBarB {
+  background-image: linear-gradient(to right, #ffffff95, #58bcee);
+  border-radius: 12px !important;
+}
+.xpBarV {
+  text-shadow: none;
+}
+span[style="color:#fbc02d;font-size:42px;vertical-align:bottom"],
+span[style="color:#96ff50;font-size:42px;vertical-align:bottom"],
+a[onclick="showWindow(13)"] {
+  color: #ffffff95 !important;
+}
+.updDisN,
+.subPassChg,
+.settingsBtn {
+  background-color: var(--accent);
+}
+.menuLink {
+  color: var(--accent);
+}
+#profilePicM {
+  content: url(https://cdn.discordapp.com/attachments/837695235231711252/957242498361724948/image_12.png);
+  filter: none;
+  border: 4px solid var(--accent);
+}
+.pSt {
+  text-shadow: 0 0 0 var(--black), 1px 0 0 var(--black), -1px 0 var(--black),
+    0 -1px var(--black), 0 1px var(--black), 1px 1px var(--black),
+    1px -1px var(--black), -1px 1px var(--black), -1px -1px var(--black),
+    0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black),
+    -2px 0 var(--black), 1px 2px var(--black), -1px 2px var(--black),
+    1px -2px var(--black), -1px -2px var(--black), 2px 2px var(--black),
+    -2px 2px var(--black), 2px -2px var(--black), -2px -2px var(--black),
+    0 0 2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black);
+  color: white !important;
+}
+.pSt strong {
+  color: black;
+}
+/*Friends*/
+a[style="color:rgba(255,255,255,0.9)"],
+div[style="color:rgba(255,255,255,0.4);font-size:16px;margin-top:4px;max-width:500px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"],
+.settName,
+.settNameSmall {
+  color: #00000085 !important;
+}
+.button.buttonR {
+  border-color: var(--accent) !important;
+}
+/*Shop*/
+.shopCard[style="color:#b2f252;border: 4px solid;text-shadow: 0px 0px 30px rgb(0 0 0);width:293px;height: 202px;background: rgba(0, 0, 0, 0.4);"] {
+  background-color: #b2f252 !important;
+}
+.shopCard[style="color:#2196F3;border: 4px solid;text-shadow: 0px 0px 30px rgb(0 0 0);width:293px;height: 202px;background: rgba(0, 0, 0, 0.4);"] {
+  background-color: #2196f3 !important;
+}
+.shopCard[style="color:#fc9803;border: 4px solid;text-shadow: 0px 0px 30px rgb(0 0 0);width:293px;height: 202px;background: rgba(0, 0, 0, 0.4);"] {
+  background-color: #fc9803 !important;
+}
+.creatorCodeBtn {
+  background-color: var(--accent) !important;
+}
+span[style="color:#cc51f8;font-size:42px;vertical-align:bottom"] {
+  color: #58bcee !important;
+}
+/*Sliders*/
+.slider,
+.slider:before {
+  border-radius: 0 !important;
+}
+input:checked + .sliderSml {
+  background-color: #58bcee;
+}
+span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
+  display: none;
+}
+.switchsml {
+  margin-left: -25px !important;
+}
+input:checked + .slider {
+  background-color: #58bcee;
+}
+input:checked + .optCheck {
+  background-color: #58bcee;
+}
+input:checked + .slider2 {
+  background-color: #58bcee;
+}
+.hostToggle,
+.hostPresetBtn,
+.loadoutBtn {
+  background-color: #58bcee;
+}
+/*Make sure noobs cant change the settings*/
+
+/*remove this, ad you'll die bitch*/
+/*CustomizeWindow*/
+.classCard {
+  text-shadow: 0 0 0 var(--black), 1px 0 0 var(--black), -1px 0 var(--black),
+    0 -1px var(--black), 0 1px var(--black), 1px 1px var(--black),
+    1px -1px var(--black), -1px 1px var(--black), -1px -1px var(--black),
+    0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black),
+    -2px 0 var(--black), 1px 2px var(--black), -1px 2px var(--black),
+    1px -2px var(--black), -1px -2px var(--black), 2px 2px var(--black),
+    -2px 2px var(--black), 2px -2px var(--black), -2px -2px var(--black),
+    0 0 2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black);
+  filter: drop-shadow(0 0 0 #000000);
+  background-color: var(--accent);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.classCard:hover {
+  transform: scale(0.95);
+}
+.clsXPBarC {
+  background-image: linear-gradient(to right, #ffffff95, #58bcee);
+  border-radius: 12px;
+}
+.classXPBar {
+  border-radius: 12px;
+}
+/*Weapons*/
+#itemSearchH {
+  background-color: transparent;
+}
+.itemOwn,
+.itemSea {
+  opacity: 0;
+}
+.skinCard {
+  color: white !important;
+}
+.skinCard[style="border:5px solid lightgrey"] {
+  background-color: lightgrey;
+}
+.skinCard[style="color:#292929;border:5px solid#292929"] {
+  background-color: #292929;
+  color: white !important;
+}
+.skinCard[style="color:#FBC02D;border:5px solid#FBC02D"] {
+  background-color: #fbc02d;
+}
+.skinCard[style="color:#ed4242;border:5px solid#ed4242"] {
+  background-color: #ed4242;
+}
+.skinCard[style="color:#E040FB;border:5px solid#E040FB"] {
+  background-color: #e040fb;
+}
+.skinCard[style="color:#2196F3;border:5px solid#2196F3"] {
+  background-color: #2196f3;
+}
+.skinCard[style="color:#b2f252;border:5px solid#b2f252"] {
+  background-color: #b2f252;
+}
+.skinCard[style="color:color:#b2f252;border:5px solid#b2f252"] {
+  background-color: #b2f252;
+}
+.custContainer {
+  transition: 0.45s;
+  border-radius: 20px;
+  background-color: var(--accent);
+}
+.custContainer:hover {
+  transform: scale(0.95);
+  background-color: #58bcee !important;
+}
+.premiumSkinCol {
+  color: #58bcee !important;
+}
+/*INGAMEHUD*/
+
+#bottomLeftHolder::before {
+  content: " ";
+  background: url(https://cdn.discordapp.com/attachments/925735566727868476/957582280107384902/image_10.png);
+  background-size: contain;
+  background-position: center top;
+  width: 320px;
+  height: 320px;
+  position: fixed;
+  padding: 0;
+  border-radius: 0px;
+  bottom: -10px;
+  left: 20px;
+  z-index: 9;
+  filter: drop-shadow(-8px 8px var(--white));
+}
+/*Health*/
+#hudClassIcon {
+  display: none !important;
+}
+#healthValueHolder {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  left: 280px;
+  bottom: 70px;
+  background-color: transparent;
+}
+#healthValue {
+  color: var(--white);
+  font-size: 64px;
+  text-shadow: 0 0 0 var(--black), 1px 0 0 var(--black), -1px 0 var(--black),
+    0 -1px var(--black), 0 1px var(--black), 1px 1px var(--black),
+    1px -1px var(--black), -1px 1px var(--black), -1px -1px var(--black),
+    0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black),
+    -2px 0 var(--black), 1px 2px var(--black), -1px 2px var(--black),
+    1px -2px var(--black), -1px -2px var(--black), 2px 2px var(--black),
+    -2px 2px var(--black), 2px -2px var(--black), -2px -2px var(--black),
+    0 0 2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black);
+}
+#healthValue::before {
+  content: "healing";
+  font-family: "Material Icons";
+  font-size: 40px;
+  margin-right: 10px;
+  color: var(--white);
+  text-shadow: 0 0 0 var(--black), 1px 0 0 var(--black), -1px 0 var(--black),
+    0 -1px var(--black), 0 1px var(--black), 1px 1px var(--black),
+    1px -1px var(--black), -1px 1px var(--black), -1px -1px var(--black),
+    0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black),
+    -2px 0 var(--black), 1px 2px var(--black), -1px 2px var(--black),
+    1px -2px var(--black), -1px -2px var(--black), 2px 2px var(--black),
+    -2px 2px var(--black), 2px -2px var(--black), -2px -2px var(--black),
+    0 0 2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black);
+}
+#maxHP,
+#challIcon {
+  display: none;
+}
+#healthBar {
+  width: 500px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 0;
+  position: fixed;
+  left: 260px;
+  bottom: 40px;
+}
+/*There you are little shit*/
+.healthBarSeg:last-child .hpBSeg {
+  border-radius: 0 100px 100px 0;
+}
+.healthBarSeg {
+  width: -webkit-fill-available;
+  margin: 0 -1px;
+  border-radius: 0;
+  background-color: transparent;
+}
+.hpBSeg {
+  border-radius: 0;
+  box-shadow: none;
+  color: #98d625 !important;
+  background-color: var(--accent) !important;
+}
+.hpBSeg[style*="#cd3732"] {
+  background-color: var(--accent) !important;
+}
+/*Ammo*/
+#ammoDisplay {
+  transform: unset;
+  background-color: transparent;
+  position: fixed;
+  left: calc(50% - 40px);
+  bottom: calc(50% - 60px);
+  height: 8px;
+  width: 80px;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(var(--accent), var(--accent));
+}
+#ammoVal {
+  color: var(--accent-2);
+  font-size: 64px;
+  display: inline-block;
+  position: fixed;
+  left: calc(20% + 140px);
+  bottom: 70px;
+  text-shadow: 0 0 0 var(--black), 1px 0 0 var(--black), -1px 0 var(--black),
+    0 -1px var(--black), 0 1px var(--black), 1px 1px var(--black),
+    1px -1px var(--black), -1px 1px var(--black), -1px -1px var(--black),
+    0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black),
+    -2px 0 var(--black), 1px 2px var(--black), -1px 2px var(--black),
+    1px -2px var(--black), -1px -2px var(--black), 2px 2px var(--black),
+    -2px 2px var(--black), 2px -2px var(--black), -2px -2px var(--black),
+    0 0 2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black);
+}
+#ammoVal::after {
+  content: "radio_button_checked";
+  font-family: "Material Icons";
+  display: inline-block;
+  font-size: 40px;
+  margin-left: 20px;
+}
+#ammoMax,
+#ammoIcon {
+  display: none !important;
+}
+#reloadMsg {
+  bottom: calc(50% - 200px);
+  background-color: transparent !important;
+  border: none;
+  color: var(--border);
+  font-family: "Bungee";
+  font-size: 0;
+  animation: breathe 1s infinite alternate;
+}
+#reloadMsg::before {
+  content: "RELOAD";
+  font-size: 30px;
+  font-weight: bold;
+}
+.killStreakItem {
+  background-color: #000;
+  position: fixed;
+  bottom: 20px;
+  left: calc(50% + 320px);
+  box-shadow: 6px 6px var(--accent);
+}
+/*Weapon Display*/
+#weapDisplay {
+  bottom: 20px;
+  right: 40px;
+}
+.weapItem {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.weapIcon {
+  filter: brightness(1) drop-shadow(2px 2px var(--accent))
+    drop-shadow(-2px -2px var(--accent)) drop-shadow(2px 2px var(--accent));
+  opacity: 0 !important;
+  transition-duration: 0.25s;
+  height: 0;
+  width: 180px;
+}
+.weapIcon[style*="1"] {
+  opacity: 1 !important;
+  height: 90px;
+}
+#weapIconMel {
+  margin: 0 !important;
+}
+.weapKey {
+  display: none;
+}
+
+/*LeaderBoard*/
+#leaderDisplay {
+  background-color: var(--accent);
+  border-radius: 0;
+  box-shadow: 6px 6px var(--white);
+  padding-top: 32px;
+  margin-right: 12px;
+}
+#leaderDisplay::before {
+  content: "LEADERBOARD";
+  display: block;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  font-size: 16px;
+  padding: 0px 20px;
+  text-align: center;
+  width: 60%;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-55%);
+}
+.leaderItem {
+  font-size: 24px;
+}
+.leaderName {
+  color: #fa8c8c;
+}
+.leaderCounter,
+.leaderNameM,
+.leaderScore {
+  color: #ffffff95;
+}
+.leaderNameF {
+  color: #fff;
+  opacity: 0.8;
+}
+.leaderNameM::before {
+  content: "chevron_right";
+  font-family: "Material Icons";
+}
+.countIcon {
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 25px;
+}
+/*Top Left*/
+#timerDisplay {
+  border-radius: 0;
+  background-color: var(--accent);
+  box-shadow: 6px 6px var(--white);
+  padding: 8px 16px;
+}
+#timerVal {
+  font-size: 48px;
+  color: #fff;
+}
+#timerIcon {
+  display: none;
+}
+.debugInfo {
+  display: grid;
+  margin-top: 12px;
+}
+#fpsDisplay {
+  width: 120px;
+}
+#ingameFPS {
+  color: var(--accent) !important;
+}
+#pingDisplay {
+  grid-column: 2;
+}
+#pingText,
+#ingressPacketCount,
+#ingressDataSize,
+#egressPacketCount,
+#egressDataSize {
+  color: var(--accent);
+}
+#pingText::after {
+  content: " ms";
+  color: rgba(255, 255, 255, 0.6);
+}
+#pingIcon,
+#curGameInfo {
+  display: none;
+}
+#teamScores {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+  border-radius: 0;
+  box-shadow: 6px 6px var(--white);
+}
+#teamScores[style="display: inline-block;"] {
+  display: flex !important;
+}
+.tScore:first-child {
+  direction: rtl;
+}
+.tScoreC {
+  background-color: #fa8c8c;
+  border-radius: 50%;
+}
+#tScoreC1 {
+  margin-left: 10px;
+}
+.tScoreT {
+  font-size: 32px;
+  color: #fff;
+}
+#gameMessage {
+  top: 96px;
+}
+/*LOgin/out*/
+.button.buttonO.lgn {
+  border-color: var(--white) !important;
+  background-color: var(--accent);
+  border-radius: 20px;
+  width: 115px !important;
+  height: 100px;
+  margin: 0;
+  top: -10px;
+  left: 10px;
+  transition: 0.4s;
+}
+.button.buttonO.lgn:hover {
+  transform: scale(0.9) rotate(2deg);
+}
+.accBtn.button.buttonG {
+  border: none !important;
+  background-color: var(--accent);
+}
+.accBtn.button.buttonP {
+  border: none !important;
+  background-color: var(--white);
+  color: var(--accent) !important;
+}
+/*Endcard*/
+.endCard {
+  background-color: var(--accent);
+  box-shadow: 8px 8px var(--white);
+}
+
+#tabHolder,
+#matchVoteHolder,
+#endTable {
+  background-color: transparent;
+}
+
+.tabHeader.selected {
+  color: #fff;
+  border-bottom: none;
+}
+
+.tabHeader {
+  color: rgba(225, 225, 225, 0.9);
+}
+
+.tabHeader:hover {
+  color: #fff;
+  border-bottom: none;
+}
+
+#endTable tbody tr th {
+  border-bottom: none;
+  font-size: 0;
+  color: var(--accent);
+}
+
+#endTable tbody tr th:after {
+  font-size: 20px;
+}
+
+#endlb_rank:after {
+  content: "順位";
+  color: #fff;
+}
+
+#endlb_name:after {
+  content: "名前";
+  color: #fff;
+}
+
+#endlb_score:after {
+  content: "得点";
+  color: #fff;
+}
+
+#endlb_kills:after {
+  content: "殺す";
+  color: #fff;
+}
+
+#endlb_deaths:after {
+  content: "死";
+  color: #fff;
+}
+
+#endlb_objective:after {
+  content: "目的";
+  color: #fff;
+}
+
+#endlb_dmg:after {
+  content: "Dmg";
+  color: #fff;
+}
+
+#endlb_reward:after {
+  content: "Reward";
+  color: #fff;
+}
+
+.teamTotals {
+  background-color: black;
+}
+
+.crStat,
+#kdLayout,
+.gfSection,
+.endSection {
+  background-color: transparent;
+  border: none;
+}
+
+.tabBody
+  [style="text-align:center;color:#fff;font-size:30px;background-color:rgba(0, 0, 0, 0.4);border-radius:6px;padding:20px;"],
+.tabBody
+  [style*="text-align:center;color:#fff;font-size:30px;background-color:rgba(0, 0, 0, 0.4);"],
+.reportBut,
+.xpLvl,
+.modeStatus,
+.fundsVal,
+.crLabel,
+.crVal,
+.teamTotalN0,
+.teamTotalN1,
+.teamWin0,
+.teamWin1,
+.teamTotalScore,
+.matchVoteMap,
+.matchVoteMode,
+.matchVoteTotal,
+.endTitle,
+#endTimer,
+#endTable td span,
+.endTableN[style="color:rgba(255,255,255,0.6)"] {
+  background-color: transparent !important;
+  color: var(--white) !important;
+}
+#endTable td {
+  color: var(--white) !important;
+}
+.endTableN[style="color:#eb5656"] {
+  color: #e87676 !important;
+}
+
+.xpEndBar {
+  background-color: transparent;
+}
+
+.xpEndBarB {
+  background-image: linear-gradient(to right, #ffffff95, #58bcee);
+}
