@@ -38,7 +38,9 @@
 .verticalSeparator,
 #menuRnkDisp,
 #faceItIconM,
-#loadEditrBtn {
+#loadEditrBtn,
+#mainLogoFace,
+.menuMGLink {
   display: none !important;
 }
 /*Loading Screen*/
@@ -415,11 +417,12 @@ div:last-child .chatItem {
 }
 #menuMiniProfilePic {
   background-color: transparent;
-  border: 1.5px solid var(--white);
+  border: 1.2px solid var(--white);
   border-radius: 50%;
   content: url(https://cdn.discordapp.com/attachments/837695235231711252/957242498361724948/image_12.png);
   margin-right: 50px;
   transform: translateY(70px) translateX(70px) scale(5.2);
+   image-rendering: auto;
 }
 #menuAccountUsername {
   color: var(--accent);
@@ -504,8 +507,8 @@ div:last-child .chatItem {
 #menuJNKCount {
   font-size: 25px;
   position: relative;
-  left: 60px;
-  top: -35px;
+  left: 70px;
+  top: -34.5px;
   color: var(--accent);
   z-index: -3;
 }
@@ -600,28 +603,23 @@ div:last-child .chatItem {
   background-image: none;
 }
 #menuBtnHost {
-  bottom: 10px;
-  right: 20%;
+  bottom: 8px;
+  right: 19%;
   transform: translate(-50%, 0);
 }
 #menuBtnBrowser {
-  top: 30px;
+  top: 20px;
   right: 24%;
   transform: translate(-55%, 0);
 }
-#menuBtnRanked {
-  top: 45px;
-  right: 18%;
-  transform: translate(0, 0);
-}
 #inviteButton {
-  left: 55%;
-  bottom: 25px;
+  left: 0;
+  top: 30px;
   transform: translate(-55%, 0);
 }
 #menuBtnJoin {
-  bottom: 190px;
-  left: 100%;
+  bottom: 30px;
+  left: 50%;
   transform: translate(-50%, 0);
 }
 /*customize*/
@@ -721,9 +719,15 @@ div:last-child .chatItem {
 }
 #policeButton {
   position: fixed;
-  right: 0px;
-  top: 0px;
+  right: -15px;
+  top: 23%;
   transform: scale(0.8);
+   border-radius: 50%;
+   width: 120px !important;
+   height:120px !important;
+}
+#policeButton img {
+   margin-top: 30px !important;
 }
 #menuClassContainer:hover > #classPreviewCanvas {
   opacity: 1;
@@ -739,7 +743,7 @@ div:last-child .chatItem {
 }
 .buttonB {
   border-color: var(--accent) !important;
-  background-color: var(--white);
+  background-image: linear-gradient(to right, var(--accent), #58bcee);
 }
 /*Spec*/
 #spectButton span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
@@ -760,7 +764,7 @@ div:last-child .chatItem {
 #menuWindow.dark {
   background-color: var(--white);
   box-shadow: 8px 8px 0px 2px var(--accent);
-  border-radius: 0 !important;
+  border-radius: 8px !important;
 }
 .serverHeader {
   background-color: var(--white);
@@ -777,6 +781,11 @@ a {
 }
 #instructionsUpdate div {
   color: var(--accent) !important;
+}
+.settingsHeader {
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   background-color: #6c6c6c;
 }
 /*Profile*/
 .setHed,
@@ -869,7 +878,7 @@ span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
 .switchsml {
   margin-left: -25px !important;
 }
-input:checked + .slider {
+input:checked + .slider, input:checked+.advancedSlider {
   background-color: #58bcee;
 }
 input:checked + .optCheck {
@@ -1282,6 +1291,9 @@ input:checked + .slider2 {
   background-color: var(--white);
   color: var(--accent) !important;
 }
+.accountInput {
+   color: var(--accent) !important;
+}
 /*Endcard*/
 .endCard {
   background-color: var(--accent);
@@ -1408,4 +1420,5 @@ input:checked + .slider2 {
 
 .xpEndBarB {
   background-image: linear-gradient(to right, #ffffff95, #58bcee);
+   border-radius: 12px;
 }
