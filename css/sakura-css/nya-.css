@@ -746,8 +746,10 @@ div:last-child .chatItem {
   background-image: linear-gradient(to right, var(--accent), #58bcee);
 }
 /*Spec*/
-#spectButton span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
+#spectButton span[style="font-size:15px;color:rgba(255,255,255,.6)"] {
   display: none !important;
+   font-size: 0 !important;
+   color: transparent !important;
 }
 /*Windows*/
 #windowHolder[style="display: none;"] {
@@ -921,6 +923,9 @@ input:checked + .slider2 {
 }
 .classXPBar {
   border-radius: 12px;
+}
+.custSubContainer {
+   background-color: transparent;
 }
 /*Weapons*/
 #itemSearchH {
