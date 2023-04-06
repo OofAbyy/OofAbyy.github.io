@@ -1,0 +1,231 @@
+:root {
+  --accent: #c49497;
+  --accent-2: rgb(136, 105, 116);
+  --hotlane-primary-color: var(--accent) !important;
+  --gm-theme-color: var(--accent);
+  --gm-theme-color--base: var(--accent);
+  --gm-theme-color--stateful: var(--accent);
+}
+/*Welcome Screen*/
+.VfPpkd-Jh9lGc {
+  background-color: #c49497;
+  border-color: var(--gm-theme-color);
+}
+.VfPpkd-vQzf8d {
+  color: #fff;
+}
+.ksBjEc:hover:not(:disabled),
+.ksBjEc.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:disabled),
+.ksBjEc:not(.VfPpkd-ksKsZd-mWPk3d):focus:not(:disabled),
+.ksBjEc:active:not(:disabled),
+.VfPpkd-vQzf8d:hover {
+  color: var(--accent-2) !important;
+}
+.cfWmIb .VfPpkd-fmcmS-wGMbrd {
+  caret-color: var(--accent-2);
+}
+.Qcuypc {
+  position: fixed;
+  transform: translate(0%, 40%);
+  top: 0%;
+  left: 10%;
+}
+.C9bDzc {
+  visibility: hidden;
+}
+.C9bDzc:after {
+  visibility: visible !important;
+  content: url("https://cdn.discordapp.com/attachments/1093120633572962430/1093151394627854437/829876827.png");
+  display: block !important;
+  position: fixed;
+  transform: translate(-15%, -35%) scale(0.75);
+  top: 50%;
+  left: 50%;
+}
+.gb_Ld.gb_9c::after {
+  display: block;
+  content: "megumi ver.";
+  position: fixed;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent);
+}
+#gb {
+  background-color: #eed1d4 !important;
+  border: 2px solid var(--accent);
+  border-radius: 18px;
+  height: 80px;
+  width: 97%;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 8px;
+}
+.VfPpkd-LgbsSe-OWXEXe-k8QpJ .VfPpkd-Jh9lGc,
+.VfPpkd-RLmnJb,
+.VfPpkd-LgbsSe
+  .VfPpkd-LgbsSe-OWXEXe-k8QpJ
+  .VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc
+  .VfPpkd-LgbsSe-OWXEXe-dgl2Hf
+  .nCP5yc
+  .AjY5Oe
+  .LQeN7
+  .cjtUbb
+  .Dg7t5c,
+.VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-i5vt6e-OWXEXe-di8rgd-V67aGc,
+.VfPpkd-fmcmS-yrriRe,
+.VfPpkd-LgbsSe .VfPpkd-Jh9lGc {
+  border-radius: 12px !important;
+  transition: 0.6s;
+}
+.Dg7t5c:not(:disabled) {
+  background-color: transparent;
+}
+/*In MEETING*/
+/*Micro stuffs*/
+.nJcgFc.FTMc0c,
+.CdgDHf.FTMc0c,
+.P9KVBf .nJcgFc.FTMc0c,
+.P9KVBf .CdgDHf.FTMc0c {
+  transition: 0.3s;
+  width: 50px !important;
+}
+.nJcgFc.FTMc0c:hover,
+.CdgDHf.FTMc0c:hover,
+.P9KVBf .nJcgFc.FTMc0c:hover,
+.P9KVBf .CdgDHf.FTMc0c:hover {
+  transform: translate(0, -10px);
+}
+.P9KVBf .uaILN {
+  transition: 0.3s;
+  width: 50px;
+}
+.P9KVBf .uaILN:hover,
+.P9KVBf .xHd4Cb.VfPpkd-Bz112c-LgbsSe-OWXEXe-IT5dJd:not(:disabled) {
+  color: black !important;
+  background-color: #ab5e5e;
+  transform: translate(0, -10px);
+}
+.p2ZbV,
+.IisKdb,
+.GN4RFc {
+  background: var(--accent) !important;
+  border-radius: 12px;
+}
+.crqnQb {
+  background-image: url("https://oofabyy.github.io/img/69724359_p0.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.oZRSLe,
+.WUFI9b,
+.IZY82c,
+.v8W0vf,
+.dkjMxf {
+  background-color: #90899f;
+  border-radius: 18px !important;
+  color: #dbdbdb;
+}
+.N1c98 {
+  color: #dbdbdb;
+}
+.Sdwpn.P9KVBf {
+  position: fixed;
+  background: var(--accent-2) !important;
+  color: #dbdbdb !important;
+  border-radius: 15px;
+  width: 80%;
+  height: 8%;
+  top: unset;
+  bottom: 20px !important;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.Sdwpn.P9KVBf::before {
+  content: url("https://cdn.discordapp.com/attachments/1093120633572962430/1093146218101735464/106783986_p1-removebg-preview.png");
+  position: absolute;
+  display: block;
+  left: -120px;
+  width: 20px !important;
+  transition: 0.4s;
+}
+@keyframes asdf {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.Sdwpn.P9KVBf:not(:disabled)::before {
+  cursor: pointer !important;
+  animation: asdf 3s linear infinite;
+}
+.lefKC {
+  opacity: 0 !important;
+}
+.QQrMi {
+  width: 300px !important;
+  border-radius: 100px;
+  transition: 0.6s;
+  transform: scale(1.1) translate(20px, -1px);
+}
+.Gt6sbf:not(:disabled):hover {
+  transform: scale(1.1) translate(20px, -5px);
+}
+.P9KVBf .jh0Tpd:not(:disabled):hover,
+.P9KVBf .jh0Tpd:not(:disabled):focus {
+  box-shadow: none;
+}
+.google-material-icons.VfPpkd-kBDsod.NtU4hc {
+  color: #dbdbdb !important;
+}
+.VfPpkd-dgl2Hf-ppHlrf-sM5MNb {
+  margin-right: 8px;
+}
+/*INsanething*/
+.axUSnc {
+  transform: scale(0.8);
+  margin-bottom: 240px !important;
+}
+/*Chat*/
+.WUFI9b {
+  top: 15px;
+  height: 85%;
+  border-radius: 12px;
+}
+.R3Gmyc {
+  background-color: transparent;
+}
+.P9KVBf .pBHsAc:enabled .VfPpkd-l6JLsf::after,
+.P9KVBf .pBHsAc:enabled .VfPpkd-l6JLsf::after,
+.LXctle:enabled .VfPpkd-l6JLsf::after,
+.P9KVBf .Vzh3ib:not(:disabled) {
+  background: var(--accent) !important;
+}
+/*Waiting room*/
+.google-material-icons.VfPpkd-kBDsod,
+.google-material-icons.VfPpkd-cfyjzb,
+.WbUJNb.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc,
+.rvBHac.VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb:hover,
+.Hnvug:not(:disabled):hover .VfPpkd-Q0XOV,
+.Hnvug:not(:disabled) .VfPpkd-Q0XOV,
+.Hnvug:not(:disabled):hover .VfPpkd-nBWOSb,
+.Hnvug:not(:disabled) .VfPpkd-nBWOSb {
+  color: var(--accent-2) !important;
+}
+.rvBHac .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb {
+  border-color: var(--accent-2);
+}
+.teYtmc {
+  color: var(--accent-2);
+  background: rgba(0, 0, 0, 0.2);
+}
+.KieQAe {
+  background-color: rgba(245, 225, 226, 0.6);
+  width: 70%;
+  border-radius: 20px;
+}
