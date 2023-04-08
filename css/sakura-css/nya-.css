@@ -40,7 +40,10 @@
 #faceItIconM,
 #loadEditrBtn,
 #mainLogoFace,
-.menuMGLink {
+.menuMGLink,
+#streamContainer,
+#mapInfoHld,
+#menuClassIcn {
   display: none !important;
 }
 /*Loading Screen*/
@@ -422,7 +425,7 @@ div:last-child .chatItem {
   content: url(https://cdn.discordapp.com/attachments/837695235231711252/957242498361724948/image_12.png);
   margin-right: 50px;
   transform: translateY(70px) translateX(70px) scale(5.2);
-   image-rendering: auto;
+  image-rendering: auto;
 }
 #menuAccountUsername {
   color: var(--accent);
@@ -682,27 +685,10 @@ div:last-child .chatItem {
   transition: 0.4s;
   filter: drop-shadow(0 0 20px var(--border-color));
 }
-#menuClassName {
-  bottom: 10px;
-  position: fixed;
-  left: 20px;
-  transition: 0.6s;
-  opacity: 0;
-}
-#menuClassSubtext {
-  bottom: 70px;
-  transition: 0.4s;
-  position: fixed;
-  left: 20px;
-  opacity: 0;
-}
+#menuClassName,
+#menuClassSubtext,
 #menuClassNameTag {
-  margin-top: unset;
-  position: fixed;
-  left: 20px;
-  bottom: 100px;
-  opacity: 0;
-  transition: 0.6s;
+  display: none;
 }
 #classPreviewCanvas {
   z-index: -1;
@@ -712,22 +698,23 @@ div:last-child .chatItem {
   top: unset;
   bottom: -350px;
   right: unset;
-  transform: translate(-50%, 0%) scale(0.8);
+  transform: translate(-50%, 20%) scale(0.6);
   opacity: 0;
   filter: drop-shadow(0 0 10px var(--accent-color));
   transition: 0.6s;
 }
 #policeButton {
   position: fixed;
-  right: -15px;
-  top: 23%;
+  left: 72%;
+  top: -72%;
   transform: scale(0.8);
-   border-radius: 50%;
-   width: 120px !important;
-   height:120px !important;
+  border-radius: 50%;
+  width: 120px !important;
+  height: 120px !important;
+  border-color: var(--accent) !important;
 }
 #policeButton img {
-   margin-top: 30px !important;
+  margin-top: 10px !important;
 }
 #menuClassContainer:hover > #classPreviewCanvas {
   opacity: 1;
@@ -748,8 +735,8 @@ div:last-child .chatItem {
 /*Spec*/
 #spectButton span[style="font-size:15px;color:rgba(255,255,255,.6)"] {
   display: none !important;
-   font-size: 0 !important;
-   color: transparent !important;
+  font-size: 0 !important;
+  color: transparent !important;
 }
 /*Windows*/
 #windowHolder[style="display: none;"] {
@@ -785,9 +772,9 @@ a {
   color: var(--accent) !important;
 }
 .settingsHeader {
-   border-top-left-radius: 8px;
-   border-top-right-radius: 8px;
-   background-color: #6c6c6c;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #6c6c6c;
 }
 /*Profile*/
 .setHed,
@@ -847,9 +834,6 @@ div[style="color:rgba(255,255,255,0.4);font-size:16px;margin-top:4px;max-width:5
 .settNameSmall {
   color: #00000085 !important;
 }
-.button.buttonR {
-  border-color: var(--accent) !important;
-}
 /*Shop*/
 .shopCard[style="color:#b2f252;border: 4px solid;text-shadow: 0px 0px 30px rgb(0 0 0);width:293px;height: 202px;background: rgba(0, 0, 0, 0.4);"] {
   background-color: #b2f252 !important;
@@ -880,7 +864,8 @@ span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
 .switchsml {
   margin-left: -25px !important;
 }
-input:checked + .slider, input:checked+.advancedSlider {
+input:checked + .slider,
+input:checked + .advancedSlider {
   background-color: #58bcee;
 }
 input:checked + .optCheck {
@@ -925,7 +910,7 @@ input:checked + .slider2 {
   border-radius: 12px;
 }
 .custSubContainer {
-   background-color: transparent;
+  background-color: transparent;
 }
 /*Weapons*/
 #itemSearchH {
@@ -1297,7 +1282,7 @@ input:checked + .slider2 {
   color: var(--accent) !important;
 }
 .accountInput {
-   color: var(--accent) !important;
+  color: var(--accent) !important;
 }
 /*Endcard*/
 .endCard {
@@ -1425,5 +1410,5 @@ input:checked + .slider2 {
 
 .xpEndBarB {
   background-image: linear-gradient(to right, #ffffff95, #58bcee);
-   border-radius: 12px;
+  border-radius: 12px;
 }
