@@ -1,3 +1,11 @@
+:root {
+  --accent: #c49497;
+  --accent-2: rgb(136, 105, 116);
+  --hotlane-primary-color: var(--accent) !important;
+  --gm-theme-color: var(--accent);
+  --gm-theme-color--base: var(--accent);
+  --gm-theme-color--stateful: var(--accent);
+}
 /*Welcome Screen*/
 .VfPpkd-Jh9lGc {
   background-color: #c49497;
@@ -177,6 +185,13 @@
 }
 .VfPpkd-dgl2Hf-ppHlrf-sM5MNb {
   margin-right: 8px;
+}
+.nCP5yc:not(:disabled) {
+  background-color: var(--accent) !important;
+}
+.KVQBvc {
+  filter: invert(74%) sepia(23%) saturate(540%) hue-rotate(308deg)
+    brightness(88%) contrast(71%);
 }
 /*INsanething*/
 .axUSnc {
