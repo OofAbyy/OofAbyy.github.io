@@ -709,8 +709,8 @@ div:last-child .chatItem {
   top: -72%;
   transform: scale(0.8);
   border-radius: 50%;
-  width: 120px !important;
-  height: 120px !important;
+  width: 110px !important;
+  height: 105px !important;
   border-color: var(--accent) !important;
 }
 #policeButton img {
@@ -1403,12 +1403,73 @@ input:checked + .slider2 {
 .endTableN[style="color:#eb5656"] {
   color: #e87676 !important;
 }
-
+.matchVoteTotal[style="color: rgb(251, 192, 45);"] {
+  color: rgb(251, 192, 45) !important;
+}
 .xpEndBar {
   background-color: transparent;
 }
 
 .xpEndBarB {
-  background-image: linear-gradient(to right, #ffffff95, #58bcee);
+  background-image: none;
+  background-color: #58bcee !important;
   border-radius: 12px;
+}
+/*KillCard*/
+#deathUIHolder {
+  display: block !important;
+}
+#deathUIBottom {
+  background-color: var(--accent);
+  border-radius: 18px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  box-shadow: 8px 8px var(--white);
+  display: grid;
+  grid-gap: 0 !important;
+}
+#deathUIBottom::before {
+  content: url(https://cdn.discordapp.com/attachments/925735566727868476/1094434900263845888/LINE_nachonekodayo_014.png);
+  position: relative;
+  display: block;
+  transform: scale(0.8);
+  bottom: -60px;
+  left: calc(-100% - 120px);
+}
+.death-stats {
+  position: fixed !important;
+  right: -260px;
+  bottom: 140px !important;
+}
+.death-row-bottom {
+  position: relative;
+  top: -60px !important;
+  width: 300px;
+  left: -60px;
+  border-radius: 18px;
+  background-color: rgba(225, 225, 225, 0.6) !important;
+}
+.death-row-left,
+.death-row-right,
+.death-row-center {
+  position: relative;
+  top: 60px;
+  left: -65px;
+}
+.death-row-left .death-row-weapon-img {
+  transform: translateX(35px) !important;
+}
+.death-row-weapon-img-right {
+  transform: translateX(-35px) !important;
+}
+.death-row-right .death-row-kills {
+  transform: translateX(-25px) !important;
+}
+.death-row-left .death-row-kills {
+  transform: translateX(25px) !important;
+}
+.death-row-center-bottom {
+  position: relative;
+  top: -60px;
 }
