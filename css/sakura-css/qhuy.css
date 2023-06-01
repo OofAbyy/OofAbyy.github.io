@@ -30,7 +30,8 @@
   top: 0%;
   left: 10%;
 }
-.C9bDzc {
+.C9bDzc,
+.JR40te {
   visibility: hidden;
 }
 .C9bDzc:after {
@@ -80,6 +81,16 @@
 .Dg7t5c:not(:disabled) {
   background-color: transparent;
 }
+.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.ksBjEc.lKxP2d.LQeN7.tufHuc {
+  margin-top: 20px;
+}
+.U26fgb.JRY2Pb.mUbCce.kpROve.yBiuPb.y1zVCf.HNeRed.M9Bg4d,
+.U26fgb.JRY2Pb.mUbCce.kpROve.yBiuPb.y1zVCf.M9Bg4d.FTMc0c.N2RpBe.jY9Dbb,
+.U26fgb.JRY2Pb.mUbCce.kpROve.yBiuPb.y1zVCf.M9Bg4d.FTMc0c.N2RpBe.jY9Dbb.OGbUle,
+.U26fgb.JRY2Pb.mUbCce.kpROve.yBiuPb.y1zVCf.M9Bg4d.OGbUle {
+  width: 80px;
+  border-radius: 40px;
+}
 /*In MEETING*/
 /*Micro stuffs*/
 .nJcgFc.FTMc0c,
@@ -112,7 +123,7 @@
   border-radius: 12px;
 }
 .crqnQb {
-  background-image: url("https://oofabyy.github.io/img/69724359_p0.jpg");
+  background-image: url("https://oofabyy.github.io/img/101413777_p1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -224,6 +235,7 @@
 .Hnvug:not(:disabled) .VfPpkd-nBWOSb {
   color: var(--accent-2) !important;
 }
+
 .rvBHac .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb {
   border-color: var(--accent-2);
 }
